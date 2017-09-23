@@ -4,12 +4,11 @@ var mongoose = require('mongoose'),
     Lesson = mongoose.model('Lesson');
 
 
-export default function getLesons(req, res) {
+exports.getLessons = function(req, res) {
     Lesson.find({}, (err, lessons) => {
         res.send(users);
     })
 }
-
 
 exports.postLesson = function(req, res) {
   var lesson = new Lesson(req.body)
@@ -23,23 +22,24 @@ exports.postLesson = function(req, res) {
 }
 
 exports.deleteLesson = function(req, res) {
-  /*  User.remove({_id: req.params.id}, (err, user) => {
+  
+    Lesson.remove({_id: req.params.id}, (err, user) => {
         if(err) {
             res.send(err);
         } else {
-            res.send("User deleted")
+            res.send("Lesson deleted")
         }
-    }) */
+    }) 
 }
 
 exports.getLesson = function(req, res) {
- /*   User.findById(req.params.id, (err, user) => {
+    Lesson.findById(req.params.id, (err, user) => {
         if(err) {
             res.send(err);
         } else {
             res.send(user);
         }
-    }) */
+    }) 
 }
 
 exports.populate = function(req, res) {
