@@ -1,0 +1,33 @@
+[
+   {
+        "subject": "Maths",
+        "city": "Paris",
+        "area": "10",
+        "move": "move",
+        "date": "",
+        "level": "6eme",
+        
+        "regular": true,
+    
+        "author": "",
+        "isTeacher": true,
+        "matchedUsers": []
+   }, 
+
+   {
+        "subject": "English",
+        "city": "Montpellier",
+        "area": "3",
+        "move": "house",
+        "date": "",
+        "level": "6eme",
+        
+        "regular": false,
+
+        "author": "",
+        "isTeacher": false,
+        "matchedUsers": []
+    }
+
+
+]

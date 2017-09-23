@@ -14,9 +14,15 @@ app.use(bodyParser.json());
 var cors = require('cors')
 app.use(cors())
 
+// ADD ROUTES
 var userRoutes = require('./api/routes/userRoutes');
 userRoutes(app);
 
+var lessonRoutes = require('./api/routes/lessonRoutes');
+lessonRoutes(app);
+
+
+// START APP
 app.listen(port);
 
 console.log('nodetest RESTful API server started on: ' + port);
