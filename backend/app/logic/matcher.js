@@ -24,13 +24,17 @@ module.exports = {
 
 function distanceFilter(d1, d2) {
 	var distance=getDistanceFromLatLonInKm(d1.position.lat,d1.position.long,d2.position.lat,d1.position.long)
-	if (d1.town==d2.town || distance<=50) {return true}
-    return true;
+	if (d1.town==d2.town || distance<=50) {
+    return true
+  }
+  return false;
 }
 
 function topicsFilter(t1, t2) {
     for (var t of t1) {
-        if(t2.includes(t)) return true;
+        if(t2.includes(t)) {
+          return true;
+        }
     }
     return false;
 }
